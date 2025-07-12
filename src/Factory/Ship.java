@@ -56,12 +56,13 @@ public class Ship {
         this.wheel = wheel;
     }
 
-    public Anchor getAnchor() {
-        return anchor;
+    public  Anchor getAnchor() {
+        Anchor Anchor = null;
+        return Anchor;
     }
 
     public void setAnchor(Anchor anchor) {
-        this.anchor = anchor;
+        this.anchors = anchor;
     }
 
 }

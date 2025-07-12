@@ -55,6 +55,6 @@ public class DefaultTourBuilder implements TourPlanBuilder {
 
     @Override
     public TourPlan getPlan() {
-        return new TourPlan(title, nights, days, startDate, whereToStay, plans);
+        return new TourPlan(title, nights, days, startDate, whereToStay, plans); // 실제 필요한 값들을 받아온다.
     }
 }
