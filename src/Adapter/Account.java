@@ -1,6 +1,8 @@
 package Adapter;
 
-public class Account {
+import Adapter.secutity.UserDetails;
+
+public class Account implements UserDetails {
 
     private String name;
 
@@ -16,10 +18,14 @@ public class Account {
         this.name = name;
     }
 
+    @Override //인터페이스 구현
+    public String getUsername() {
+        return this.name;
+    }
+    @Override //인터페이스 구현
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }

@@ -51,7 +51,7 @@ public class GithubIssue implements Cloneable {
         githubIssue.setId(this.id);
         githubIssue.setTitle(this.title);
 
-        return super.clone();
+        return super.clone(); //자바 기본제공 클론메서드
     }
 
     @Override

@@ -1,6 +1,9 @@
 package Adapter;
 
-public class AccountService {
+import Adapter.secutity.UserDetails;
+import Adapter.secutity.UserDetailsService;
+
+public class AccountService implements UserDetailsService {
 
     public Account findAccountByUsername(String username) {
         Account account = new Account();
@@ -18,4 +21,8 @@ public class AccountService {
 
     }
 
+    @Override //인터페이스 구현 내용
+    public UserDetails loadUser(String username) {
+        return findAccountByUsername(username);
+    }
 }

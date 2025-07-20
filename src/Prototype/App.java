@@ -14,7 +14,7 @@ public class App {
         String url = githubIssue.getUrl();
         System.out.println(url);
 
-        GithubIssue clone = (GithubIssue) githubIssue.clone();
+        GithubIssue clone = (GithubIssue) githubIssue.clone(); //타입 형변환
         System.out.println(clone.getUrl());
 
         System.out.println(clone != githubIssue);
