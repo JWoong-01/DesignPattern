@@ -8,7 +8,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-//퍼사드 클래스
+//퍼사드 클래스,
 public class EmailSender {
     private EmailSettings emailSettings;
 
@@ -27,13 +27,14 @@ public class EmailSender {
         Session session = Session.getDefaultInstance(properties);
 
         try {
+            //메시지 전송 로직
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress(emailMessage.getFrom()));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(emailMessage.getTo()));
             message.addRecipient(Message.RecipientType.CC, new InternetAddress(emailMessage.getCc()));
             message.setSubject(emailMessage.getSubject());
             message.setText(emailMessage.getText());
-
+            //전송
             Transport.send(message);
         } catch (MessagingException e) {
             e.printStackTrace();

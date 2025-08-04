@@ -1,5 +1,6 @@
 package Facade;
 
+// 매시지 내용
 public class EmailMessage {
     private String from;
 

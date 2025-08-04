@@ -34,6 +34,6 @@ public class beforeClient {
         }
     }
 }
-//이메일 Sender -> Settings 사용
+//이메일 Sender -> Settings 사용, Message정보
 //이메일 Message -> 메시지 정보 지정
 //이메일 Settings -> host 정보
